@@ -1,0 +1,11 @@
+[build]
+  command = ""          # No build command
+  publish = "."         # Use current folder as the root
+
+[build.environment]
+  NODE_VERSION = "18"   # Ensure stable Node version for Netlify CMS
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
