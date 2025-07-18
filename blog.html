@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - My Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #667eea;
+        }
+        
+        main {
+            padding: 4rem 0;
+        }
+        
+        .hero {
+            text-align: center;
+            color: white;
+            margin-bottom: 4rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .blog-posts {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .blog-post {
+            padding: 2rem;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            transition: transform 0.3s ease;
+        }
+        
+        .blog-post:hover {
+            transform: translateY(-5px);
+        }
+        
+        .blog-post h2 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .blog-post .meta {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-post p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .read-more {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        
+        .read-more:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .content {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">My Blog</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="/admin">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <section class="hero">
+            <h1>Blog Posts</h1>
+            <p>All my thoughts and insights in one place</p>
+        </section>
+        
+        <section class="content">
+            <div class="blog-posts">
+                <article class="blog-post">
+                    <h2>Getting Started with Web Development</h2>
+                    <div class="meta">Published on March 15, 2024 | 5 min read</div>
+                    <p>Web development can seem overwhelming when you're just starting out. With so many technologies, frameworks, and best practices to learn, it's easy to feel lost in the vast ocean of possibilities.</p>
+                    <p>In this comprehensive guide, I'll walk you through the fundamental concepts every web developer should know. We'll start with the basics of HTML, CSS, and JavaScript, then explore how these technologies work together to create dynamic web experiences.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+                
+                <article class="blog-post">
+                    <h2>The Future of Technology</h2>
+                    <div class="meta">Published on March 10, 2024 | 7 min read</div>
+                    <p>Technology is evolving at an unprecedented pace, and as developers, we need to stay ahead of the curve. From artificial intelligence to quantum computing, emerging technologies are reshaping how we think about problem-solving and innovation.</p>
+                    <p>In this post, I explore the most exciting technological trends that will define the next decade. We'll discuss their potential impact on web development and how you can prepare for these changes.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+                
+                <article class="blog-post">
+                    <h2>Building Better User Experiences</h2>
+                    <div class="meta">Published on March 5, 2024 | 6 min read</div>
+                    <p>User experience (UX) is at the heart of every successful web application. It's not just about making things look pretty – it's about creating intuitive, accessible, and meaningful interactions that solve real problems for real people.</p>
+                    <p>This article covers practical strategies for improving UX in your projects. From conducting user research to implementing accessibility best practices, we'll explore how to create websites that users love to use.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+                
+                <article class="blog-post">
+                    <h2>Mastering CSS Grid and Flexbox</h2>
+                    <div class="meta">Published on February 28, 2024 | 8 min read</div>
+                    <p>CSS Grid and Flexbox are two of the most powerful layout tools in modern web development. Understanding when and how to use each one can dramatically improve your ability to create responsive, flexible layouts.</p>
+                    <p>Join me as we dive deep into these layout methods, exploring practical examples and real-world use cases. By the end of this article, you'll have the confidence to tackle any layout challenge.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Blog. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
